@@ -1,4 +1,4 @@
 FROM openjdk:11
 EXPOSE 8080
 ADD target/Pahse5_FSD_SL_FEB-0.0.1-SNAPSHOT.jar Pahse5_FSD_SL_FEB-0.0.1-SNAPSHOT.jar
-ENTRYPOINT ["java","jar","Pahse5_FSD_SL_FEB-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","jar","/Pahse5_FSD_SL_FEB-0.0.1-SNAPSHOT.jar"]
