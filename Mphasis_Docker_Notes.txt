@@ -1,0 +1,352 @@
+Cloud Computing
+
+AWS
+- EC2
+  - instance
+  - volume
+  - S3
+  - IAM
+
+
+Docker - containerization
+
+Install docker
+Architecture
+Images & Container
+Create our image
+Docker hub
+Docker swarm
+
+
+
+
+
+Images
+
+
+  Name of Image defined in Docker :
+
+
+  registryname/repository/Imagename:tagname
+
+  docker.io/library/ubuntu:22.04
+
+
+
+ Docker Images: managed by docker
+
+  
+ registryname/repository/Imagename:tagname
+
+  ---->    ubuntu:22.04
+
+
+--->
+
+ Custom Image
+
+   registryname/repository/Imagename:tagname
+
+   ipaddress:5000/sonal04/myimage:v1
+
+
+   sonal04/myimage:v1
+
+
+
+Commands:
+
+
+docker images  ==> returns images available on local machine
+
+Scenario 1:
+******
+docker pull ubuntu ==> will pull ubuntu from docer hub
+
+docker images
+
+Scenario 2:
+ *******
+docker pull tomcat:7
+
+Scenario 3:
+****
+ Delete a docker image from local docker host
+
+
+ docker rmi tomcat:7
+
+Scenario 4:
+****
+
+Create a container from an Image
+
+  docker ps -a ==> how many container are in your docker host
+
+  docker run ubuntu ==> create a container
+
+ docker run --name u1 ubuntu ==> create a container with custom name
+
+
+Scenario 5:
+***
+
+delete a container
+
+ docker rm -f containerid/containername
+
+
+Scneario 6:
+*******
+
+ Status or State a container can be in
+
+
+  Start --->Up  --> Stop --> exited --> Restart--> UP 
+
+Scenario 7:
+*************
+ docker run
+
+
+Mode in Container
+
+1. Foreground Mode ==> -it
+
+docker run -it OSimages ==> you container will be in status UP and running and user will be logged on the container
+
+comeout of the container
+
+ctlpctlq  ==> come out of container and container state will UP and running
+
+exit ==> come out of the container and container state will go to exited
+
+
+Again attach to the container
+
+docker attach containername/id ==> user will be on the container again
+
+
+
+2. background Mode or detached Mode ==> -d
+
+
+  Docker run -d imagename ==> you container will be create, status will be up & running but user will not be on the container
+
+
+Scenario 8:
+****
+
+Port forwarding/port mapping
+
+ : Container that can accessed from browser or from a script : external world
+
+
+ 1.  containers of type webserver, appservers, db servers
+
+ 2. if a container is exposed to a port you can access it from a browser 
+
+
+
+
+docker run -p 8282:80 -d --name web nginx ==> port mapping done by user
+
+
+docker run -P --name web2 -d httpd  ==> random port mapping done by docker
+
+
+Scenario 9:
+****
+
+Docker volumes
+
+  > you will able to preserve the data of your container on the docker host
+
+  > Even if the container is deleted, the data in the colume can be shared on other new container
+ 
+  > Multiple container can share a single volume there by sharing common data
+
+  > If a file needs to be on the container, use volumes
+
+You will mount the volume on the container directory
+
+
+Scenario 9.1:
+*****
+
+Create volume in Docker  : Named Volume
+
+
+$ docker volume create myvol
+
+$ docker volume ls
+
+$ docker volume inspect myvol
+
+where the data is preserved
+
+"Mountpoint": "/var/lib/docker/volumes/myvol/_data",
+
+Scenario 9.2:
+*****
+
+Mount the volume on container to preserve the data
+
+
+
+  docker run --name u1 -it -v myvol:/tmp ubuntu
+
+
+
+/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.312.b07-1.amzn2.0.2.x86_64
+
+
+
+/var/lib/jenkins/workspace/package/target/addressbook.war
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

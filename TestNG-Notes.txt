@@ -1,0 +1,233 @@
+
+Junit
+
+What Is TestNG?
+
+- It is testing framework
+
+- set of annotations -> 
+
+   > help you to execute your tests ==> test methods
+
+a selenium script/Java code enclosed inside a testNg annotation ==> Test method
+
+- pre condition & post conditions can be given using TESTNG framework
+
+login --> create email --> Logout
+
+start DB connection --> execute script ---> stop the DB connection
+
+> using TestNG xml files you can execute multiple scripts in sequence or in parallel
+
+> TestNG also genrates a test report
+
+> TestNG run your script with multiple set of data ==> data driven testing + apache poi
+
+> TestNG to perform continous testing ==> along with TestNG + git+ maven+ jenkins + selenium from a remote server
+
+Git commands for     > add a file 
+                     > commit a version
+                     > push a file to remote repo
+                     > clone a repo
+
+
+TestNg Annotations:
+
+
+1. @Test  : execute your test cases
+
+How to use this annotation
+
+  @Test(priority='1')
+  public void Testcase1() -----------> Test method
+   {
+     system.out.println("this is testcase1");
+  }
+  
+ // create method dependency
+
+ @Test(dependsOnMethods={"method1","method2"})
+
+  public void method3()
+{
+}
+
+
+2. @BeforeMethod : precondition ==> start chrome browser ==> this method will be executed before every test method
+
+    @Test : execute the test cases ==> test method
+    @Test  ==> test method
+    @Test  ==> test method
+
+   @Aftermethod : post condition  ==> close the browser ==> this method will be executed after every test method
+
+
+  open browser ==> wikihomepage test ==> close browser
+
+  open browser ==> loginpage ==> close browser
+
+
+
+
+
+3. @BeforeClass ==> the method with this annotation will get executed as the first method in the class
+
+
+   @Test
+   @Test
+
+
+  @AfterClass ==> the method with this annotation will get executed as the last method in the class
+
+
+The method with annotation @BeforeClass @Before Method , @AfterClass & @AfterMethod --> condition, they are not test methods
+
+
+
+4 @Parameters({"nameOfParameter"})
+  @Test
+  public void testcase( String nameOfParameter )
+   {
+    
+    SOP (nameOfParameter);
+
+     }
+
+
+fetch the vlaue of the parameter from testng XML file
+
+In the xml file
+
+
+  <suite>
+   <test>
+     <parameter name=nameOfParameter value="xyz">
+    <classes>
+      <class>
+
+
+
+
+*************************
+
+
+  we have an excel sheet with data in it
+
+
+Apache POI
+
+Step 1: provide the location of excel sheet  : FileInputStream
+
+step2 : fetch the workbook form this location : WorkBook, WorkBookFactory
+
+step 3: fetch the sheet which data in the excel : Sheet , getSheet()
+
+step4 : In the sheet count how many rows and how many columns have data : getLastRowNum(), getLastCellNum()
+
+Step 5: start  for loop for the row
+
+    Step 6:  got to each row
+
+      Step 7: start a loop for columns
+
+         step 8: go to each cell of every column
+        
+
+            Step 9 : fetch the contents of each cell for that row
+
+Step 10 return the data => Object[][]
+      
+
+Step 11 : write the testNG annotation ==> @DataProvider ==> resposible to supply data to your test method
+
+Step 12: write the test method which needs data and add parameters
+
+Step 13: Use dataProvider option with @test annotation to pass data to your paramters
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

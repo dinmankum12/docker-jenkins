@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+  
+<suite name="Suite1" verbose="1" >
+
+  <test name="TestNgScripts1" >
+  <parameter name="browserName" value="chrome"></parameter>
+  <parameter name="loc1" value="draggable"></parameter>
+  <parameter name="loc2" value="droppable"></parameter>
+    <classes>
+       <class name="com.qa.TestNGScripts.Day4.CrossBrowsertest" />
+    </classes>
+  </test>
+  
+  <test name="TestNgScripts2" >
+  <parameter name="browserName" value="Firefox"></parameter>
+  <parameter name="loc1" value="draggable"></parameter>
+  <parameter name="loc2" value="droppable"></parameter>
+    <classes>
+       <class name="com.qa.TestNGScripts.Day4.CrossBrowsertest" />
+    </classes>
+  </test>
+  
+  </suite>

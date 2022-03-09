@@ -1,0 +1,252 @@
+
+
+Selenium set of tools
+
+Selenium IDE  : record and playback tool
+
+Not possible:
+
+Add different sets of DATA --> parameterization
+No reports are generated, time taken
+Synchronization: asking the tool to wait for certain amount
+parallel exectuion
+No programming language needed
+
+
+
+
+extrnsion browser : chrome, FF , edge
+
+Selenium RC : deprecated
+
+Selenium WebDriver : 
+
+main tool selenium --> write scripts
+
+
+platform : windows , MAC , Linux
+
+Using selenium : we can test on all browsers : chrome, safari, edge, IE, firefox
+
+Script : steps to be excuted by the tool
+
+programing languages: java, JS, python, ruby C#, perl
+
+
+Add different sets of DATA --> parameterization
+reports are generated, time taken
+Synchronization: asking the tool to wait for certain amount
+parallel exectuion
+programming language needed
+
+
+Selenium GRID  : distributed environment to execute your scripts in multiple machine
+
+
+
+
+Open source : free
+
+
+
+
+  >  TextBox : enter different types of  data, field enabled , displayed on the page
+
+  > Button : displayed , enabled, click,
+  
+  > Link : displayed , enabled, click,
+ 
+  > Images: displayed , enabled, click,
+ 
+  > checkbox & radio button : displayed , enabled, click,isselected or not
+  > tables: fetch data, enter data,
+
+
+
+Locators : using any one of these locators, we can find the element on the webpage, so as to perform action on it
+
+Element attributes: <input id="searchInput" name="search" type="search" size="20" 
+autofocus="autofocus" accesskey="F" dir="auto" autocomplete="off" style="padding-right: 64px;">
+
+
+
+ ID  :
+
+ Name  :
+
+ Classname  :
+
+ Tagname :
+
+ LinkText :
+
+ partialLinkText :
+
+ Xpath :
+
+ CssSelector: 
+
+
+Every WebElement ===> set of attributes ==> the values of these attributes can be mapped to you locators value
+
+find the element on the webpage using the locator value and perform an action
+
+1. method to enter data in an inputbox on the webpage : 
+
+  driver.findElement(By.Id('value')).sendKeys("data");
+
+2. method to click on a button
+
+  driver.findElement(By.Id('value')).click()
+
+
+3. driver.findElements(By.tagName("input")).get(0 to n-1).sendKeys();    ===> 10 elements
+
+tell me the method name which find me the 3rd element in the list'
+
+4. XPATH
+
+
+************************
+
+XPATH ==> relative xpath , xpath functions , 
+
+XPATH : XML path to find an element on the HTML document
+
+root node
+
+element node : represents the element, call it as Current node < attributes></>
+
+<input id="wpName2" name="wpName" size="20" class="loginText mw-ui-input" placeholder="Enter your username" tabindex="1" 
+required="" autocomplete="username">
+
+text node: any node that contains text for an element
+<p>articles</p>
+
+attributes: define features of an element
+
+Types of XPATH
+
+Absolute XPATH :
+
+/path to your element starting from root node
+
+/html/body/div[3]/div[3]/div[4]/div[1]/div[2]/form/div/div[2]/div/input
+
+Relative XPATH :
+
+start from the element node
+
+syntax : //tagname[@attribute='value']
+
+//input[@id='wpPassword2'] 
+
+How to write XPATH for a Text node
+
+USE an XPATH function ==> text()
+
+
+Syntax : //tagname[text()='textvalue']
+
+
+Function that can be used on textnode or elementnode
+
+starts-with()
+
+element node : //tagname[starts-with(@attribute,'starting value',)]
+
+//*[starts-with(@class,'loginText')]
+
+text node :  //tagname[starts-with(text(),'starting text')]
+
+
+contains() : Function that can be used on textnode or elementnode
+
+//tagname[contains(@attribute,'any part of the value',)]
+
+text node :  //tagname[contains(text(),'any part of the text')]
+
+
+*************
+
+XPATH Axes --> Writing XPATh using relatives tags
+
+// for a particular node, find all its children tag
+
+child:
+
+//tagname[@attribute='value']/child::*
+
+//form[@name='register_mail']/child::*
+
+//div[@id='leftcontainer']/child::*  ==> will return all the child nodes
+
+descendant: child & grandchild tags
+
+//form[@name='register_mail']
+
+//form[@name='register_mail']/descendant::*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

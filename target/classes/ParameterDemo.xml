@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+  
+<suite name="Suite1" verbose="1" >
+
+  <test name="TestNgScripts1" >
+  <parameter name="inputData" value="JmeterTesting"></parameter>
+    <classes>
+       <class name="com.qa.TestNGScripts.Day4.ParameterDemo" />
+    </classes>
+  </test>
+  
+  <test name="TestNgScripts2" >
+  <parameter name="inputData" value="Seleniumtesting"></parameter>
+    <classes>
+       <class name="com.qa.TestNGScripts.Day4.ParameterDemo" />
+    </classes>
+  </test>
+  
+  </suite>

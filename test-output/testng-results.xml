@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-03-02T10:51:37 IST" name="Default suite" finished-at="2022-03-02T10:51:45 IST" duration-ms="7791">
+    <groups>
+    </groups>
+    <test started-at="2022-03-02T10:51:37 IST" name="Default test" finished-at="2022-03-02T10:51:45 IST" duration-ms="7791">
+      <class name="com.qa.TestNGScripts.Day4.GridDemo">
+        <test-method is-config="true" signature="gridDemo()[pri:0, instance:com.qa.TestNGScripts.Day4.GridDemo@156b88f5]" started-at="2022-03-02T10:51:37 IST" name="gridDemo" finished-at="2022-03-02T10:51:40 IST" duration-ms="3067" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gridDemo -->
+        <test-method signature="seleniumtest()[pri:0, instance:com.qa.TestNGScripts.Day4.GridDemo@156b88f5]" started-at="2022-03-02T10:51:40 IST" name="seleniumtest" finished-at="2022-03-02T10:51:45 IST" duration-ms="4688" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- seleniumtest -->
+      </class> <!-- com.qa.TestNGScripts.Day4.GridDemo -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
